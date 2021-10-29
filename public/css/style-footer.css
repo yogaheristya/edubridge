@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+body{
+  font-family: 'Montserrat';
+}
+
+/*Start Footer*/
+.footer {
+  background-color: #A80004;
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+.footer ul li a {
+	text-decoration: none;
+	color: white;
+	font-weight: 500
+}
+
+.footer .hr {
+	background-color: white;
+	height: 1px
+}
+
+.footer p {
+	color: white;
+	font-weight: 400
+}
+
+.footer .copyright p {
+	font-size: 14px
+}
+
+.footer .copyright p a {
+	text-decoration: none;
+	color: white;
+	font-weight: 500
+}
+
+@media only screen and (max-width: 990px){
+  .footer{
+	margin-top: 40px
+  }
+ }
+/*End Footer*/

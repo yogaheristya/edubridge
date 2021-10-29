@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+body {
+    font-family: "Montserrat";
+}
+
+/*Start Layanan Kami*/
+.layanan-kami {
+    padding-top: 70px;
+}
+
+.layanan-kami .sec-title h2 {
+    font-weight: 700;
+    color: #0a223d;
+}
+
+.line {
+    height: 4px;
+    width: 100px;
+    background-color: #0a223d;
+}
+
+.menu-pills .nav-item .nav-link {
+    color: #0a223d !important;
+    font-size: 15px;
+}
+
+.menu-pills .nav-pills {
+    border: 2px solid #0a223d;
+    border-radius: 30px;
+}
+
+.menu-pills .nav-item .nav-link {
+    font-weight: 500;
+}
+
+.menu-pills .nav-item .active {
+    background-color: #0a223d !important;
+    border-radius: 20px;
+    color: #ffca2e !important;
+    font-weight: 600;
+}
+
+.menu-pills .sub-title-nav-pills {
+    color: #0a223d;
+    font-weight: 700;
+}
+
+.menu-pills .desc-tentang-kami {
+    color: #0a223d;
+    margin-top: 30px;
+    line-height: 32px;
+}
+
+.menu-pills .slogan {
+    color: #0a223d;
+    font-weight: 700;
+}
+
+/*---------Accordion Section--------------*/
+
+.accordion .accordion-button {
+    background-color: #0a223d;
+    color: #ffca2e;
+    font-weight: 600;
+}
+
+.accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.menu-pills .accordion-body {
+    background-color: #ffca2e;
+}
+
+.menu-pills .accordion-body p {
+    color: #0a223d;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+/*Start Testimonial*/
+
+.testimonial .item {
+    background-color: #0a223d !important;
+}
+
+.owl-carousel {
+    color: white;
+}
+
+.owl-carousel .item {
+    background-color: white;
+    color: black;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 10px;
+}
+
+.owl-carousel .owl-prev,
+.owl-carousel .owl-nav {
+    color: #0a223d !important;
+    font-weight: 600;
+}
+
+.owl-carousel img {
+    position: absolute;
+    top: 35px;
+    border-radius: 50%;
+}
+
+.owl-carousel .item .name {
+    font-weight: 700;
+    color: #ffca2e;
+}
+
+.owl-carousel .item .status {
+    font-weight: 500;
+    color: white;
+}
+
+.owl-carousel .rating-star {
+    font-size: 10px;
+    color: #f2994a;
+}
+
+.owl-carousel .item .says {
+    color: white;
+    font-weight: 500;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 26px;
+}
+
+@media only screen and (max-width: 990px) {
+    .layanan-kami {
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .layanan-kami .sec-title {
+        padding-bottom: 30px;
+    }
+
+    .owl-carousel .item {
+        background-color: white;
+        color: black;
+        margin-top: 100px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+    }
+
+    .owl-carousel .item .status {
+        font-size: 12px;
+    }
+
+    .owl-carousel .item .says {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 16px;
+    }
+}
+/*End Testimonial*/
+
+/*End Layanan Kami*/
