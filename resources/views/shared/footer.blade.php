@@ -11,7 +11,7 @@
         <div class="col-12 col-lg-2 text-lg-end text-center p-0 mt-4 mt-lg-0">
           <ul class="list-unstyled">
             <li class="mb-3">
-              <a href="#" target="_blank"><small>LAYANAN KAMI</small></a>
+              <a href="/layanan-kami"><small>LAYANAN KAMI</small></a>
             </li>
             <li class="mb-3">
               <a href="#" target="_blank"><small>BERITA</small></a>
@@ -25,10 +25,10 @@
         <div class="col-12 col-lg-2 text-lg-end text-center p-0">
           <ul class="list-unstyled">
             <li class="mb-3">
-              <a href="#" target="_blank"><small>STUDI LUAR NEGERI</small></a>
+              <a href="/studi-luar"><small>STUDI LUAR NEGERI</small></a>
             </li>
             <li class="mb-3">
-              <a href="#" target="_blank"><small>HUBUNGI KAMI</small></a>
+              <a href="/hubungi-kami" target="_blank"><small>HUBUNGI KAMI</small></a>
             </li>
             <li>
               <a href="#" target="_blank"><small>TESTIMONIAL</small></a>
@@ -39,13 +39,13 @@
         <div class="col-12 col-lg-2 text-lg-end text-center p-0">
           <ul class="list-unstyled">
             <li class="mb-3">
-              <a href="#" target="_blank"><small>KURSUS BAHASA</small></a>
+              <a href="/kursus-bahasa"><small>KURSUS BAHASA</small></a>
             </li>
             <li class="mb-3">
               <a href="#" target="_blank"><small>DAFTAR SEKARANG</small></a>
             </li>
             <li>
-              <a href="#" target="_blank"><small>PIPE PSIKOTES</small></a>
+              <a href="https://pipe-psikotes.co.id/" target="_blank"><small>PIPE PSIKOTES</small></a>
             </li>
           </ul>
         </div>

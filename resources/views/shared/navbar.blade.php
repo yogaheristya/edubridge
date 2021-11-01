@@ -7,16 +7,16 @@
           <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNavDropdown">
             <ul class="navbar-nav text-center">
               <li class="nav-item mt-2 mt-lg-0 mb-2 mb-lg-0">
-                <a class="nav-link pb-1 {{($title == "home" ? 'active' : '')}}" aria-current="page" href="/">BERANDA</a>
+                <a class="nav-link pb-1 {{($title == "home" ? 'active' : '')}}" aria-current="page" href="/beranda">BERANDA</a>
               </li>
               <li class="nav-item mb-2 mb-lg-0">
                 <a class="nav-link pb-1 {{($title == "layanan" ? 'active' : '')}}" href="/layanan-kami" >LAYANAN KAMI</a>
               </li>
               <li class="nav-item mb-2 mb-lg-0">
-                <a class="nav-link pb-1 {{($title == "studi" ? 'active' : '')}}"" href="/studi-luar">STUDI LUAR NEGERI</a>
+                <a class="nav-link pb-1 {{($title == "studi" ? 'active' : '')}}" href="/studi-luar">STUDI LUAR NEGERI</a>
               </li>
               <li class="nav-item mb-2 mb-lg-0">
-                <a class="nav-link pb-1" href="#">KURSUS BAHASA</a>
+                <a class="nav-link pb-1 {{($title == "kursus" ? 'active' : '')}}" href="/kursus-bahasa">KURSUS BAHASA</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link pb-1 mb-2 mb-lg-0 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -28,7 +28,7 @@
                 </ul>
               </li>
               <li class="nav-item mb-2 mb-lg-0">
-                <a class="nav-link pb-1" href="#">HUBUNGI KAMI</a>
+                <a class="nav-link pb-1" {{($title == "hubung" ? 'active' : '')}} href="/hubungi-kami">HUBUNGI KAMI</a>
               </li>
               <li class="nav-item mb-2 mb-lg-0">
                 <a class="nav-link pb-1" href="#">DAFTAR SEKARANG</a>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LayananController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +17,18 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/layanan-kami', function () {
-    return view('pages/layanan-kami', ['title' => 'layanan']);
-});
+Route::get('/beranda', [HomeController::class, 'index']);
+
+Route::get('/layanan-kami', [LayananController::class, 'index']);
 
 Route::get('/studi-luar', function () {
     return view('pages/studi-luar', ['title' => 'studi']);
+});
+
+Route::get('/kursus-bahasa', function () {
+    return view('pages/kursus-bahasa', ['title' => 'kursus']);
+});
+
+Route::get('/hubungi-kami', function () {
+    return view('pages/hubungi-kami', ['title' => 'hubung']);
 });
