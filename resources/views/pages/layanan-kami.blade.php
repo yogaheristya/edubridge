@@ -11,14 +11,18 @@
     <title>Edubridge | Layanan Kami</title>
 
     <!-- Style Css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('css/style-layanan-kami.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/style-navbar.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/style-footer.css')}}">
+    <link rel="stylesheet" type="text/css" href="../css/style-layanan-kami.css">
+
     <!-- Font Awesome 5 -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"crossorigin="anonymous">
 
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="../owl/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="../owl/owl.theme.default.css">
+
   </head>
   <body>
+
     @include('shared/header')
     @include('shared/navbar')
 
@@ -35,10 +39,10 @@
        <div class="menu-pills mt-5">
          <ul class="nav nav-pills pt-2 pb-2 d-flex justify-content-evenly ps-2 mb-3" id="pills-tab" role="tablist">
           <li class="nav-item col-12 col-md-4 col-xl-auto" role="presentation">
-            <button class="nav-link mx-auto mx-xl-0" id="pills-tentang-kami-tab" data-bs-toggle="pill" data-bs-target="#pills-tentang-kami" type="button" role="tab" aria-controls="pills-tentang-kami" aria-selected="true">TENTANG KAMI</button>
+            <button class="nav-link mx-auto mx-xl-0 active" id="pills-tentang-kami-tab" data-bs-toggle="pill" data-bs-target="#pills-tentang-kami" type="button" role="tab" aria-controls="pills-tentang-kami" aria-selected="true">TENTANG KAMI</button>
           </li>
           <li class="nav-item col-12 col-md-4 col-xl-auto" role="presentation">
-            <button class="nav-link mx-auto mx-xl-0 active" id="pills-layanan-kami-tab" data-bs-toggle="pill" data-bs-target="#pills-layanan-kami" type="button" role="tab" aria-controls="pills-layanan-kami" aria-selected="false">LAYANAN KAMI</button>
+            <button class="nav-link mx-auto mx-xl-0" id="pills-layanan-kami-tab" data-bs-toggle="pill" data-bs-target="#pills-layanan-kami" type="button" role="tab" aria-controls="pills-layanan-kami" aria-selected="false">LAYANAN KAMI</button>
           </li>
           <li class="nav-item col-12 col-md-4 col-xl-auto" role="presentation">
             <button class="nav-link mx-auto mx-xl-0" id="pills-tips-perencanaan-studi-tab" data-bs-toggle="pill" data-bs-target="#pills-tips-perencanaan-studi" type="button" role="tab" aria-controls="pills-tips-perencanaan-studi" aria-selected="false">TIPS PERENCANAAN STUDI</button>
@@ -57,194 +61,119 @@
         <!-- Start Content NAV PILLS  -->
 
         <div class="tab-content mt-5" id="pills-tabContent">
-          <div class="tab-pane fade " id="pills-tentang-kami" role="tabpanel" aria-labelledby="pills-tentang-kami-tab">
+          <div class="tab-pane fade show active" id="pills-tentang-kami" role="tabpanel" aria-labelledby="pills-tentang-kami-tab">
 
-            <h5 class="sub-title-nav-pills text-center mb-5">TENTANG EDUBRIDGE EDUCATION CONSULTING</h5>
+            <h5 class="sub-title-nav-pills text-center mb-5">Tentang Kami</h5>
             
-            <img src="{{$dataTentang["cover_url"]}}" class="img-fluid">
+            <img src="{{$dataTentang["cover"]['url']}}" class="img-fluid">
 
-            {{-- <div class="desc-tentang-kami">
-              <p><strong>EDUBRIDGE EDUCATION CONSULTING</strong> adalah lembaga konsultasi pendidikan ke luar negeri untuk calon pelajar yang berencana melanjutkan studi ke luar negeri, seperti ke Amerika, Kanada, Inggris, Irlandia, Swiss, Jerman, Prancis, Spanyol, Norwegia, China, Hong Kong, Jepang, Korea, Malaysia, Singapura, Australia, dan Selandia Baru. EduBridge juga merupakan Lembaga Pendidikan yang menyediakan program kursus bahasa Inggris dan Mandarin. Tim konselor kami adalah para profesional berdedikasi yang memiliki pengalaman tinggal, bekerja dan belajar di luar negeri demi memberikan pelayanan yang terbaik.</p>
-
-              <p><strong>EDUBRIDGE EDUCATION CONSULTING</strong> memahami bahwa klien adalah partner yang berharga, dengan demikian kami senantiasa mencoba untuk melakukan diskusi secara mendalam dan terarah dalam menganalisa bakat dan kemampuan setiap individu secara terbuka dan jujur untuk memperoleh hasil terbaik untuk setiap rencana studi ke luar negeri.</p>
-
-              <p><strong>EDUBRIDGE EDUCATION CONSULTING</strong> juga menekankan pentingnya mengunjungi institusi representatif kami demi memperoleh informasi yang terbaru dan akurat sehingga calon murid mampu memutuskan jurusan dan universitas yang paling tepat dan terbaik sesuai dengan minat dan kemampuannya.</p>
-            </div> --}}
             <div class="desc-tentang-kami">
-                {{$dataTentang["body_text"]}}
+              <?php echo htmlspecialchars_decode(stripslashes($dataTentang['contents'][0]['value'])); ?>
             </div>
 
-            <h4 class="slogan text-center mt-5 pb-3 pb-lg-0"><i>We Bridge Because We Care</i></h4>
+            {{-- <h4 class="slogan text-center mt-5 pb-3 pb-lg-0"><i>We Bridge Because We Care</i></h4> --}}
 
           </div>
-          <div class="tab-pane fade show active" id="pills-layanan-kami" role="tabpanel" aria-labelledby="pills-layanan-kami-tab">
 
-            <h5 class="sub-title-nav-pills text-center mb-5">PENAWARAN TERBAIK KAMI</h5>
+          <div class="tab-pane fade" id="pills-layanan-kami" role="tabpanel" aria-labelledby="pills-layanan-kami-tab">
+
+            <h5 class="sub-title-nav-pills text-center mb-5"><?php echo htmlspecialchars_decode(stripslashes($dataLayanan['contents'][0]['value'])); ?></h5>
 
             <div class="accordion" id="accordionPanelsStayOpenExample">
-              <div class="accordion-item mb-2">
-                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne-layanan-kami" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    1. GRATIS KONSULTASI JURUSAN & KARIR
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseOne-layanan-kami" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                  <div class="accordion-body ">
-                    <p class="mb-0"><strong>EduBridge</strong> menyediakan layanan gratis konsultasi jurusan kuliah ter-update dengan peluang karir hingga informasi mengenai universitas dan negara tujuan agar setiap calon mahasiswa dapat memutuskan jurusan dan universitas yang paling tepat dan terbaik sesuai dengan minat dan kemampuannya. Layanan konsultasi kami juga disertai dengan Psikotest yang bersifat opsional bila dibutuhkan.</p>
+              <?php 
+              $length = count($dataLayanan['contents'][1]['value']);
+              for ($i=0; $i < $length; $i++) {
+                if (isset($dataLayanan['contents'][1]['value'][$i])) {?>
+                  <div class="accordion-item mb-2">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                      <button class="accordion-button {{ $i == 0 ? "" : "collapsed" }}" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse<?=$i?>" aria-expanded="{{ $i == 0 ? "true" : "false" }}" aria-controls="panelsStayOpen-collaps<?=$i?>">
+                        <?php echo htmlspecialchars_decode(stripslashes($dataLayanan['contents'][1]['value'][$i]['title'])); ?>
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse<?=$i?>" class="accordion-collapse collapse {{ $i == 0 ? "show" : " " }}" aria-labelledby="panelsStayOpen-heading<?=$i?>">
+                      <div class="accordion-body ">
+                        <?php echo htmlspecialchars_decode(stripslashes($dataLayanan['contents'][1]['value'][$i]['body'])); ?>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-2">
-                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo-layanan-kami" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                    2. GRATIS PENGURUSAN APLIKASI
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo-layanan-kami" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                  <div class="accordion-body">
-                    <p class="mb-0"><strong>EduBridge</strong> memberikan layanan pengurusan aplikasi sekolah, penanganan tiket pesawat dan visa studi, serta pengaturan tempat tinggal dan guardian untuk calon murid yang berusia di bawah 18 tahun. Layanan ini bersifat gratis untuk para calon murid yang mendaftar ke institusi partner EduBridge.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree-layanan-kami" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    3. GRATIS PENDAMPINGAN
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree-layanan-kami" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                  <div class="accordion-body">
-                    <p class="mb-0"><strong>EduBridge</strong> mendukung penuh setiap calon murid yang melakukan studi lanjutannya dengan menyediakan pendampingan gratis di negara tujuan kuliah bersama representatif EduBridge; seperti China, Hong Kong, Singapore, Malaysia, dan Inggris. Layanan pendampingan ini pada umumnya diperuntukkan membantu calon murid untuk pembelian sim-card, pembukaan bank account, familiarisasi lingkungan sekitar dan kebutuhan lainnya.</p>
-                  </div>
-                </div>
-              </div>
+          <?php  } 
+              }  
+          ?>       
             </div>
           </div>
 
           <div class="tab-pane fade" id="pills-tips-perencanaan-studi" role="tabpanel" aria-labelledby="pills-tips-perencanaan-studi-tab">
-            <h5 class="sub-title-nav-pills text-center mb-5">TIPS PERENCANAAN STUDI & KONSULTASI</h5>
+            <h5 class="sub-title-nav-pills text-center mb-5"><?php echo htmlspecialchars_decode(stripslashes($dataRencana['contents'][0]['value'])); ?></h5>
             <div class="accordion" id="accordionPanelsStayOpenExample">
-              <div class="accordion-item mb-2">
-                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne-tips-perencanaan-studi" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    1. STUDENT INTERVIEW & KONSULTASI
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseOne-tips-perencanaan-studi" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                  <div class="accordion-body ">
-                    <p class="mb-0">Konselor <strong>EduBridge</strong> akan melakukan pendataan dan eksplorasi minat, bakat dan kemampuan akademis siswa untuk mendapatkan gambaran awal terhadap calon murid sebelum melakukan konsultasi lebih lanjut.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-2">
-                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo-tips-perencanaan-studi" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                    2. PEMETAAN JURUSAN & KARIR
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo-tips-perencanaan-studi" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                  <div class="accordion-body">
-                    <p class="mb-0">Konselor <strong>EduBridge</strong> memberikan pilihan-pilihan jurusan kuliah yang telah disesuaikan dengan minat dan kemampuan akademis serta prospek karir yang tepat. Proses ini dapat dimaksimalkan dengan bantuan PIPE Psikotest yang bersifat opsional.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree-tips-perencanaan-studi" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    3. PERHITUNGAN BUDGET STUDI
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree-tips-perencanaan-studi" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                  <div class="accordion-body">
-                    <p class="mb-0">Konselor <strong>EduBridge</strong> memberikan estimasi rincian biaya studi dan biaya hidup sesuai dengan preferensi tujuan siswa.</p>
-                  </div>
-                </div>
-              </div>
+              <?php
+                  $lengthRencana = count($dataRencana['contents'][1]['value']);
+                  for ($i = 0; $i < $lengthRencana; $i++) {
+                      if (isset($dataRencana['contents'][1]['value'][$i])) {?>
+                        <div class="accordion-item mb-2">
+                          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button {{ $i == 0 ? "" : "collapsed" }}" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse<?=$i?>-tips-perencanaan-studi" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                              <?php echo htmlspecialchars_decode(stripslashes($dataRencana['contents'][1]['value'][$i]['title'])); ?>
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapse<?=$i?>-tips-perencanaan-studi" class="accordion-collapse collapse {{ $i == 0 ? "show" : " " }}" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body ">
+                              <?php echo htmlspecialchars_decode(stripslashes($dataRencana['contents'][1]['value'][$i]['body'])); ?>
+                            </div>
+                          </div>
+                        </div>
+              <?php   }
+                    }  
+              ?>
             </div>
           </div>
 
           <div class="tab-pane fade" id="pills-tips-studi-keluar-negeri" role="tabpanel" aria-labelledby="pills-tips-studi-keluar-negeri-tab">
-            <h5 class="sub-title-nav-pills text-center mb-5">10 TIPS STUDI KELUAR NEGERI</h5>
+            <h5 class="sub-title-nav-pills text-center mb-5"><?php echo htmlspecialchars_decode(stripslashes($dataTips['contents'][0]['value'])); ?></h5>
             <div class="accordion" id="accordionPanelsStayOpenExample">
-              <div class="accordion-item mb-2">
-                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne-tips-studi-keluar-negeri" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    1. PROFILLING & KONSULTASI
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseOne-tips-studi-keluar-negeri" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                  <div class="accordion-body ">
-                    <p class="mb-0">Dimulai dengan melalukan eksplorasi minat, bakat dan kemampuan akademis untuk menyesuaikan dengan pilihan jurusan, budget studi, arah karir, preferensi universitas serta negara tujuan yang tepat.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-2">
-                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo-tips-studi-keluar-negeri" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                    2. PEMNDAFTARAN SEKOLAH/UNIVERSITAS
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo-tips-studi-keluar-negeri" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                  <div class="accordion-body">
-                    <p class="mb-0">Setelah menemukan jurusan, universitas, dan negara yang tepat, selanjutnya calon murid mempersiapkan dokumen yang dibutuhkan untuk pendaftaran aplikasi sekolah atau universitas yang dituju.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree-tips-studi-keluar-negeri" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    3. SIMULASI & PERSIAPAN IELTS
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree-tips-studi-keluar-negeri" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                  <div class="accordion-body">
-                    <p class="mb-0">Melakukan simulasi Try Out untuk mengetahui kemampuan berbahasa Inggris dan kursus persiapan IELTS agar dapat mencapai target skor yang dibutuhkan oleh sekolah atau universitas tujuan.</p>
-                  </div>
-                </div>
-              </div>
+              <?php
+                  $lengthtips = count($dataTips['contents'][1]['value']);
+                  for ($i = 0; $i < $lengthtips; $i++) {
+                      if (isset($dataTips['contents'][1]['value'][$i])) {?>
+                        <div class="accordion-item mb-2">
+                          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button {{ $i == 0 ? "" : "collapsed" }}" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse<?=$i?>-tips-studi-ke-luar-negeri" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                              <?php echo htmlspecialchars_decode(stripslashes($dataTips['contents'][1]['value'][$i]['title'])); ?>
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapse<?=$i?>-tips-studi-ke-luar-negeri" class="accordion-collapse collapse {{ $i == 0 ? "show" : " " }}" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body ">
+                              <?php echo htmlspecialchars_decode(stripslashes($dataTips['contents'][1]['value'][$i]['body'])); ?>
+                            </div>
+                          </div>
+                        </div>
+              <?php   }
+                    }  
+              ?>
             </div>
           </div>
 
-          <div class="tab-pane fade" id="pills-pendampingan" role="tabpanel" aria-labelledby="pendampingan-tab">
-            <h5 class="sub-title-nav-pills text-center">ASISTENSI DI NEGARA TUJUAN</h5>
-            <h6 class="text-center mb-5" style="color: #0A223D">Syarat & Ketentuan berlaku</h6>
+          <div class="tab-pane fade" id="pills-pendampingan" role="tabpanel" aria-labelledby="pills-pendampingan-tab">
+            <h5 class="sub-title-nav-pills text-center mb-5"><?php echo htmlspecialchars_decode(stripslashes($dataPendampingan['contents'][0]['value'])); ?></h5>
             <div class="accordion" id="accordionPanelsStayOpenExample">
-              <div class="accordion-item mb-2">
-                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne-pendampingan" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    1. PENJEMPUTAN DI BANDARA
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseOne-pendampingan" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                  <div class="accordion-body ">
-                    <p class="mb-0">Tim <strong>EduBridge</strong> akan menjemput student yang tiba di bandara negara tujuan.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-2">
-                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo-pendampingan" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                    2. REGISTRASI ULANG
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo-pendampingan" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                  <div class="accordion-body">
-                    <p class="mb-0">Tim <strong>EduBridge</strong> akan mendampingi student saat registrasi ulang di kampus, sesuai dengan jadwal yang sudah ditentukan kampus.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree-pendampingan" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    3. CHECK-IN DORMITORY
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree-pendampingan" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                  <div class="accordion-body">
-                    <p class="mb-0">Tim <strong>EduBridge</strong> akan membantu student saat check in dorm di university masing-masing.</p>
-                  </div>
-                </div>
-              </div>
+              <?php
+                  $lengthpendampingan = count($dataPendampingan['contents'][1]['value']);
+                  for ($i = 0; $i < $lengthtips; $i++) {
+                      if (isset($dataPendampingan['contents'][1]['value'][$i])) {?>
+                        <div class="accordion-item mb-2">
+                          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button {{ $i == 0 ? "" : "collapsed" }}" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse<?=$i?>-pendampingan" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                              <?php echo htmlspecialchars_decode(stripslashes($dataPendampingan['contents'][1]['value'][$i]['title'])); ?>
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapse<?=$i?>-pendampingan" class="accordion-collapse collapse {{ $i == 0 ? "show" : " " }}" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body ">
+                              <?php echo htmlspecialchars_decode(stripslashes($dataPendampingan['contents'][1]['value'][$i]['body'])); ?>
+                            </div>
+                          </div>
+                        </div>
+              <?php   }
+                    }  
+              ?>
             </div>
           </div>
 
@@ -330,7 +259,8 @@
    </section>
     <!-- End Layanan Kami -->
 
-   @include('shared/footer')
+
+    @include('shared/footer')
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -340,6 +270,18 @@
       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
       })
+    </script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../owl/owl.carousel.js"></script>
+    <script>
+      $('.owl-carousel').owlCarousel({
+          items:1,
+          margin:10,
+          autoHeight:true,
+          nav:false
+      });
     </script>
 
   </body>

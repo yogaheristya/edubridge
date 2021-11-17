@@ -32,3 +32,7 @@ Route::get('/kursus-bahasa', function () {
 Route::get('/hubungi-kami', function () {
     return view('pages/hubungi-kami', ['title' => 'hubung']);
 });
+
+Route::get('/daftar', function () {
+    return view('pages/daftar');
+});

@@ -1,128 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
 
-body{
-  font-family: 'Montserrat';
+body {
+    font-family: "Montserrat";
 }
 
 /*Start Header*/
-.header1{
-	color: #0A223D;
-	background-color: #F5FAFE;
-	padding-top: 20px;
-	padding-bottom: 16px;
+.header1 {
+    color: #0a223d;
+    background-color: #f5fafe;
+    padding-top: 20px;
+    padding-bottom: 16px;
 }
 
-.header1 h6{
-	line-height: 26px;
+.header1 h6 {
+    line-height: 26px;
 }
 
-.header1 a{
-	color: #0A223D;
-	text-decoration: none;
-	font-weight: 700
+.header1 a {
+    color: #0a223d;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-.header1 i{
-	font-size: 20px
+.header1 i {
+    font-size: 20px;
 }
 /*End Header*/
 
-
 /*Start Header2*/
 .header2 {
-	background-size: cover;
-	background-position: center;
-	padding-bottom: 23px
-}	
-
-.header2 .search-bar{
-	border: 2px solid #0A223D;
-	border-radius: 5px
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 23px;
 }
 
-.header2 .search-bar input{
-	border: none;
-	border-radius: 5px
+.header2 .search-bar {
+    border: 2px solid #0a223d;
+    border-radius: 5px;
 }
 
-.header2 .search-bar button{
-	background-color: #0A223D;
-	color: #FFCA2E;
-	border: none;
-	border-radius: 0px;
+.header2 .search-bar input {
+    border: none;
+    border-radius: 5px;
 }
 
-.header2 .link-login{
-	font-weight: 700;
-	color: #0A223D;
-	text-decoration: none;
-	font-size: 20px
+.header2 .search-bar button {
+    background-color: #0a223d;
+    color: #ffca2e;
+    border: none;
+    border-radius: 0px;
 }
 
-.header2 .btn-language{
-	font-weight: 700;
-	color: #0A223D;
-	text-decoration: none;
-	position: relative;
-	top: -2px;
-	font-size: 20px
+@media screen and (max-width: 701px) {
+    .header2 .search-bar {
+        display: none;
+    }
 }
 
-.header2 .btn-language img{
-	position: relative;
-	top: -1px
+.header2 .link-login {
+    font-weight: 700;
+    color: #0a223d;
+    text-decoration: none;
+    font-size: 20px;
 }
 
-@media(min-width: 991px){
-  .header2 .equal1 {
-	margin-top: 33px !important
-  }
-  .header2 .equal2 {
-	margin-top: 33px !important;
-  }
+.header2 .btn-language {
+    font-weight: 700;
+    color: #0a223d;
+    text-decoration: none;
+    position: relative;
+    top: -2px;
+    font-size: 20px;
 }
 
-@media(max-width: 991px){
-  .header2 {
-    padding-bottom: 15px
-  }	
-  .header2 .equal1 {
-	margin-top: 40px !important;
-	padding-right: 30px;
-	padding-left: 30px; 
-  }
-  .header2 .equal2 {
-	margin-top: 25px !important;
-	padding-left: 30px
-  }
+.header2 .btn-language img {
+    position: relative;
+    top: -1px;
+}
+
+@media (min-width: 991px) {
+    .header2 .equal1 {
+        margin-top: 33px !important;
+    }
+    .header2 .equal2 {
+        margin-top: 33px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .header2 {
+        padding-bottom: 15px;
+    }
+    .header2 .equal1 {
+        margin-top: 40px !important;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .header2 .equal2 {
+        margin-top: 25px !important;
+        padding-left: 30px;
+    }
 }
 /*End Header2*/
 
-
 /*Start Navbar*/
-.navbar{
-	background-color: #0A223D;
+.navbar {
+    background-color: #0a223d;
 }
 
 .navbar-nav {
-	font-size: 15px;
-	font-weight: 700;
-	padding-left: 7px
+    font-size: 15px;
+    font-weight: 700;
+    padding-left: 7px;
 }
 
 .navbar-nav .active {
-	color: #FFCA2E !important
+    color: #ffca2e !important;
 }
 
 .nav-link {
-	color: #F3F3F3 !important;
-	margin-right: 10px;
+    color: #f3f3f3 !important;
+    margin-right: 10px;
 }
 
-@media(max-width: 991px){
-  .navbar-toggler{
-  	margin-top: -95px;
-  	margin-right: 18px
-  }
+@media (max-width: 991px) {
+    .navbar-toggler {
+        margin-top: -95px;
+        margin-right: 18px;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .navbar-form {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 701px) {
+    .navbar-form {
+        display: block;
+    }
 }
 /*End Navbar*/

@@ -5,9 +5,18 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNavDropdown">
-            <ul class="navbar-nav text-center">
-              <li class="nav-item mt-2 mt-lg-0 mb-2 mb-lg-0">
-                <a class="nav-link pb-1 {{($title == "home" ? 'active' : '')}}" aria-current="page" href="/beranda">BERANDA</a>
+            <form class="navbar-form navbar-right" id="search-nav" role="search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search this site"/>
+                {{-- <button class="btn btn-outline-success" type="submit">Search</button> --}}
+                  {{-- <button type="submit" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button> --}}
+              </div>
+            </form>
+            <ul class="navbar-nav text-left w-100 justify-content-between" style="padding-left: 0px;">
+              <li class="nav-item mt-2 mt-lg-0 mb-2 mb-lg-0" style="padding-left: 0px;">
+                <a class="nav-link pb-1 {{($title == "home" ? 'active' : '')}}" aria-current="page" href="/beranda" style="padding-left: 0px;">BERANDA</a>
               </li>
               <li class="nav-item mb-2 mb-lg-0">
                 <a class="nav-link pb-1 {{($title == "layanan" ? 'active' : '')}}" href="/layanan-kami" >LAYANAN KAMI</a>
@@ -30,11 +39,12 @@
               <li class="nav-item mb-2 mb-lg-0">
                 <a class="nav-link pb-1" {{($title == "hubung" ? 'active' : '')}} href="/hubungi-kami">HUBUNGI KAMI</a>
               </li>
-              <li class="nav-item mb-2 mb-lg-0">
-                <a class="nav-link pb-1" href="#">DAFTAR SEKARANG</a>
+              <li class="nav-item mb-2 mb-lg-0" style="margin-right: 0px;padding-right: 0px;">
+                <a class="nav-link pb-1" href="#" style="margin-right: 0px;padding-right: 0px;">DAFTAR SEKARANG</a>
               </li>
             </ul>
           </div>
         </div>
+        
       </nav>
       <!-- End Navbar 2 -->

@@ -10,12 +10,26 @@ class LayananController extends Controller
 {
     public function index()
     {
+        // $dt = Layanan::getDataLayanan();
+        // $length = count($dt['contents'][1]['value']);
+
+        // for ($i = 0; $i < $length; $i++) {
+        //     if (isset($dt['contents'][1]['value'][$i]['body'])) {
+        //         print_r($dt['contents'][1]['value'][$i]['body']);
+        //     }
+        // }
+        // die('test');
+
         return view(
             'pages/layanan-kami',
             [
-                'title' => 'layanan',
-                'dataTentang' => Layanan::getDataTentang(),
-                'dataLayanan' => Layanan::getDataLayanan()
+                'title'        => 'layanan',
+                'dataJudul'    => Layanan::getDataTitle(),
+                'dataTentang'  => Layanan::getDataTentang(),
+                'dataLayanan'  => Layanan::getDataLayanan(),
+                'dataRencana'  => Layanan::getDataRencana(),
+                'dataTips'     => Layanan::getDataTips(),
+                'dataPendampingan' => Layanan::getDataPendampingan()
             ]
         );
     }

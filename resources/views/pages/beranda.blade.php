@@ -131,16 +131,14 @@
     <!-- Start Tujuan Studi-->
     <section class="tujuan-studi">
       <div class="container text-center">
-
        <div class="sec-title">
          <h2>PILIHAN TUJUAN STUDI</h2>
        </div>
-
        <div class="row mt-lg-5 mt-4 pt-2">
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;" onclick="location.href='/studi-luar';">
-          <div class="card card-continent">
-            <div class="card-body">
-              <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="165.000000pt" height="80.000000pt" viewBox="0 0 199.000000 128.000000" preserveAspectRatio="xMidYMid meet">
+        <div class="col-6 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;" onclick="location.href='/studi-luar';">
+          <div class="card card-continent p-0 p-lg-2">
+            <div class="card-body p-2 pt-0 pt-md-3 pb-3">
+              <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="120.000000pt" height="80.000000pt" viewBox="0 0 199.000000 128.000000" preserveAspectRatio="xMidYMid meet" class="p-0">
                 <g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#0a223d" stroke="none">
                 <path d="M1878 1269 c-10 -6 -18 -22 -18 -37 0 -62 -18 -96 -60 -115 -22 -9
                 -44 -17 -49 -17 -19 0 -45 -43 -44 -75 1 -34 -3 -37 -69 -59 -10 -3 -15 -11
@@ -171,13 +169,13 @@
                 13 23 33 50 46 60 27 23 28 42 2 60 -10 7 -24 25 -29 40 -11 29 -25 33 -53 16z"/>
                 </g>
               </svg>
-              <h6 class="pt-4 mt-2 mb-0">AMERIKA UTARA</h6>
+              <h6 class="pt-sm-3 pt-lg-4 mt-2 mb-0">AMERIKA UTARA</h6>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;" onclick="location.href='/studi-luar';">
-          <div class="card card-continent">
-            <div class="card-body">
+        <div class="col-6 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;" onclick="location.href='/studi-luar';">
+          <div class="card card-continent p-0 p-lg-2">
+            <div class="card-body p-2 pt-0 pt-md-3 pb-3">
               <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="130.000000pt" height="80.000000pt" viewBox="0 0 159.000000 129.000000" preserveAspectRatio="xMidYMid meet">
                 <g transform="translate(0.000000,129.000000) scale(0.100000,-0.100000)" fill="#0a223d" stroke="none">
                 <path d="M1195 1277 c-13 -10 -15 -16 -6 -21 6 -4 9 -12 5 -17 -3 -5 -10 -7
@@ -248,13 +246,13 @@
                 <path d="M933 13 c9 -2 23 -2 30 0 6 3 -1 5 -18 5 -16 0 -22 -2 -12 -5z"/>
                 </g>
               </svg>
-              <h6 class="pt-4 mt-2 mb-0">EROPA</h6>
+              <h6 class="pt-sm-3 pt-lg-4 mt-2 mb-0">EROPA</h6>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0" style="cursor: pointer;" onclick="location.href='/studi-luar';">
-          <div class="card card-continent">
-            <div class="card-body">
+        <div class="col-6 col-lg-3 mb-lg-0" style="cursor: pointer;" onclick="location.href='/studi-luar';">
+          <div class="card card-continent p-0 p-lg-2">
+            <div class="card-body p-2 pt-0 pt-md-3 pb-3">
               <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="130.000000pt" height="80.000000pt" viewBox="0 0 176.000000 131.000000" preserveAspectRatio="xMidYMid meet">
                 <g transform="translate(0.000000,131.000000) scale(0.100000,-0.100000)" fill="#0a223d" stroke="none">
                 <path d="M725 1289 c-8 -12 23 -38 47 -39 9 0 20 5 23 10 3 6 0 10 -8 10 -8 0
@@ -322,13 +320,13 @@
                 -20 -4z"/>
                 </g>
               </svg>
-              <h6 class="pt-4 mt-2 mb-0">ASIA</h6>
+              <h6 class="pt-sm-3 pt-lg-4 mt-2 mb-0">ASIA</h6>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" style="cursor: pointer;" onclick="location.href='/studi-luar';">
-          <div class="card card-continent">
-            <div class="card-body">
+        <div class="col-6 col-lg-3" style="cursor: pointer;" onclick="location.href='/studi-luar';">
+          <div class="card card-continent p-0 p-lg-2">
+            <div class="card-body p-2 pt-0 pt-md-3 pb-3">
               <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100.000000pt" height="80.000000pt" viewBox="0 0 160.000000 130.000000" preserveAspectRatio="xMidYMid meet">
                 <g transform="translate(0.000000,130.000000) scale(0.100000,-0.100000)"
                 fill="#0a223d" stroke="none">
@@ -361,12 +359,11 @@
                 -19z"/>
                 </g>
               </svg>
-              <h6 class="pt-4 mt-2 mb-0">AUSTRALASIA</h6>
+              <h6 class="pt-sm-3 pt-lg-4 mt-2 mb-0">AUSTRALASIA</h6>
             </div>
           </div>
         </div>
       </div>
-
       </div>
     </section>
     <!-- End Tujuan Studi-->
@@ -384,11 +381,11 @@
           @foreach ($dataTestimonial as $testimoni)
             <div class="item">
               <div class="d-flex justify-content-center">
-                <img src="{{ $testimoni["profile_url"] }}" style="width: 120px">
+                <img src="{{ $testimoni["profile_url"] }}" style="width: 120px;height : 120px" class="responsive">
                 {{-- <img src="../images/jennifer.png" style="width: 120px"> --}}
               </div>
               <h6 class="mt-5 pt-4 mb-1 text-center name">{{ $testimoni["name"]}}</h6>
-              <small class="d-flex justify-content-center status">{{ $testimoni["position"]}}</small>
+              <small class="d-flex justify-content-center status" style="text-align: center">{{ $testimoni["position"]}}</small>
 
               <div class="says pt-4 pb-2">
                 <p>{{ $testimoni["description"]}}</p>
@@ -650,7 +647,7 @@
             <h6 class="modal-title pt-1 mx-auto" id="exampleModalLabel">HALO, SELAMAT DATANG DI EDUBRIDGE!</h6>
           </div>
           <div class="modal-body text-center">
-            <img src="images/pipe-lamp-logo.png" width="70">
+            <img src="https://pipe-psikotes.co.id/src/assets/img/pdf/pipe-color.png" width="70">
             <p class="mt-4 mb-0">Sudah tahu belum kalau kamu bisa <br> mengikuti tes psikotes <strong>GRATIS?</strong></p>
           </div>
           <div class="modal-footer border-0 mx-auto mb-2">
@@ -681,7 +678,7 @@
           items:1,
           margin:10,
           autoHeight:true,
-          nav:true
+          loop:true
       });
     </script>
     <script type="text/javascript">

@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="../css/style-navbar.css">
 <!-- Start Header -->
 <header class="header1">
     <div class="container">

@@ -143,6 +143,7 @@ body {
         margin-right: 18px;
     }
 }
+
 /*End Navbar*/
 
 /*Start Banner Information*/
@@ -627,5 +628,20 @@ body {
     .footer {
         margin-top: 40px;
     }
+}
+
+@media only screen and (max-width: 767px) {
+    .tujuan-studi .card-continent svg {
+        width: 100px;
+    }
+
+    .tujuan-studi .card-continent h6 {
+        font-size: 12px;
+    }
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
 }
 /*End Footer*/

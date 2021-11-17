@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="../css/style-footer.css">
 <!-- Start Footer -->
 <section class="footer pt-4">
     <div class="container pt-3">
